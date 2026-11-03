@@ -1,14 +1,6 @@
-/* ==========================================================================
-   ARCHIVO: auth.css
-   QUÉ HACE: diseño de la pantalla de acceso (login.html).
-   Usa los colores definidos en style.css (--red, --ink, --muted, etc.),
-   por lo que ambos archivos deben cargarse juntos. No se conecta a la base de datos.
-   ========================================================================== */
 
-/* Garantiza que un elemento con el atributo "hidden" realmente desaparezca */
 [hidden] { display: none !important; }
 
-/* --- Encabezado simple de esta pantalla --- */
 .auth-header {
     max-width: 1200px;
     margin: auto;
@@ -21,14 +13,12 @@
 .back-link { font-size: 12px; font-weight: 700; color: var(--red); text-decoration: none; }
 .back-link:hover { text-decoration: underline; }
 
-/* --- Contenedor central --- */
 .auth-main {
     max-width: 960px;
     margin: 40px auto 60px;
     padding: 0 22px;
 }
 
-/* Tarjeta con dos columnas: panel rojo (izquierda) y formularios (derecha) */
 .auth-card {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
@@ -38,7 +28,6 @@
     overflow: hidden;
 }
 
-/* --- Panel rojo informativo (mismo degradado del banner anterior) --- */
 .auth-side {
     padding: 40px 32px;
     color: white;
@@ -50,10 +39,8 @@
 .auth-side h1 { font-size: clamp(26px, 3vw, 34px); letter-spacing: -1px; margin: 0 0 10px; }
 .auth-side p { font-size: 14px; line-height: 1.6; color: #ffe9e9; margin: 0; max-width: 320px; }
 
-/* --- Panel de formularios --- */
 .auth-panel { padding: 32px; }
 
-/* Pestañas "Iniciar sesión" / "Crear cuenta" */
 .tabs {
     display: flex;
     border-bottom: 1px solid var(--line);
@@ -68,12 +55,10 @@
     font-size: 14px;
     padding: 12px 8px;
     border-bottom: 3px solid transparent;
-    margin-bottom: -1px;   /* la línea de la pestaña activa cubre el borde gris */
-}
+    margin-bottom: -1px;   
 .tab:hover { color: var(--red); }
 .tab.active { color: var(--red); border-bottom-color: var(--red); }
 
-/* Mensaje de error o éxito (empieza oculto; auth.js lo muestra) */
 .auth-message {
     display: none;
     font-size: 13px;
@@ -85,7 +70,6 @@
 .auth-message.error   { display: block; color: var(--red);   background: #ffeded; border: 1px solid #f3c4c4; }
 .auth-message.success { display: block; color: var(--green); background: #e9f8f1; border: 1px solid #b9e4d1; }
 
-/* --- Campos --- */
 .field { display: block; margin-bottom: 16px; }
 .field > span { display: block; font-size: 12px; font-weight: 700; margin-bottom: 6px; }
 
@@ -100,10 +84,8 @@
     outline: 0;
 }
 .field input:focus { border-color: var(--red); }
-/* Campo marcado como inválido por auth.js */
 .field input.invalid { border-color: var(--red); background: #fff8f8; }
 
-/* Campo de contraseña con el botón "Ver" a la derecha */
 .pass { position: relative; }
 .pass input { padding-right: 62px; }
 .toggle-pass {
@@ -119,13 +101,11 @@
 }
 .toggle-pass:hover { color: var(--red); }
 
-/* Texto de ayuda bajo la contraseña */
 .hint { display: block; font-size: 11px; color: var(--muted); margin-top: 6px; }
 .hint.weak   { color: var(--red); }
 .hint.medium { color: var(--amber); }
 .hint.strong { color: var(--green); }
 
-/* Botón principal */
 .submit {
     width: 100%;
     height: 46px;
@@ -137,9 +117,8 @@
     margin-top: 6px;
 }
 .submit:hover { background: #a91e27; }
-.submit:disabled { opacity: 0.6; cursor: wait; }   /* mientras se envía */
+.submit:disabled { opacity: 0.6; cursor: wait; }
 
-/* --- Celulares y tabletas: se oculta el panel rojo y el formulario ocupa todo --- */
 @media (max-width: 760px) {
     .auth-card { grid-template-columns: 1fr; }
     .auth-side { display: none; }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -26,13 +25,16 @@
             </a>
 
             <form class="search" id="searchForm">
-                <input type="search" id="searchInput"
+                <input
+                    type="search"
+                    id="searchInput"
                     placeholder="Buscar producto, categoría o ubicación..."
-                    aria-label="Buscar productos">
+                    aria-label="Buscar productos"
+                >
                 <button type="submit" aria-label="Buscar">⌕</button>
             </form>
 
-          <a class="admin admin-link" href="login.html">
+            <a class="admin admin-link" href="login.html">
                 <span>¿Eres parte del equipo?</span>
                 <strong>Iniciar sesión</strong>
             </a>
@@ -41,23 +43,20 @@
 
         <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#inventario">Inventario</a>
+            <a href="#inventario" data-filter="all">Inventario</a>
             <a href="#ubicaciones">Ubicación de productos</a>
-            <a href="#agotados">Productos agotados</a>
-            <a href="#acciones">Accesos rápidos</a>
+            <a href="#inventario" data-filter="out">Productos agotados</a>
         </nav>
     </header>
 
     <main id="inicio">
 
-              <!-- Carrusel: cambia de imagen solo. Tiempo en milisegundos (5000 = 5 s) -->
         <section class="carousel" id="carousel" data-interval="5000"
                  aria-roledescription="carrusel" aria-label="Imágenes de la papelería">
             <div class="slides" id="slides"></div>
 
             <button class="arrow prev" type="button" aria-label="Imagen anterior">‹</button>
             <button class="arrow next" type="button" aria-label="Imagen siguiente">›</button>
-
             <div class="dots" id="dots"></div>
         </section>
 
@@ -69,6 +68,7 @@
                 <div class="section-heading">
                     <div>
                         <h2>Inventario</h2>
+
                         <p id="resultCount">Cargando productos...</p>
                     </div>
                 </div>
@@ -128,4 +128,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

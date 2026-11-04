@@ -1,1 +1,25 @@
-
+Paper-LP/
+│
+├── frontend/
+│   ├── index.html
+│   ├── css/
+│   └── js/
+│
+├── backend/
+│   └── ...
+│
+├── database/
+│   └── inventario.sql
+│
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   ├── acceptance/
+│   └── documentation/
+│
+├── .github/
+│   └── workflows/
+│       └── tests.yml
+│
+├── package.json
+└── README.md

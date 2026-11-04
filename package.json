@@ -1,0 +1,23 @@
+{
+  "name": "paper-system-lp-main",
+  "version": "1.0.0",
+  "description": "> **Seminario de Integración: Desarrollo** · [ENG VERSION]",
+  "main": "auth.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6"
+  }
+}

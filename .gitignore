@@ -14,3 +14,13 @@ _book
 *.epub
 *.mobi
 *.pdf
+node_modules/
+.env
+.DS_Store
+# Archivos de configuración y seguridad
+.env
+.env.*
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
